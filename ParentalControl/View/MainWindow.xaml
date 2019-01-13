@@ -1,0 +1,47 @@
+﻿<Window x:Class="ParentalControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ParentalControl"
+        mc:Ignorable="d"
+        Title="Parental Control" Height="300" Width="600" Background="White" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <StackPanel>
+        <TextBox Text="Control Panel" FontWeight="Bold" HorizontalAlignment="Center" FontSize="15"/>
+        <Separator/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--Login section -->
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="{Binding Login, StringFormat='Logged in as: {0}'}" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                <Button x:Name="ShowLogin" Click="ShowLoginButton_Click" Content="Login" Height="20" Width="150" Margin="10"/>
+               
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"/>
+
+            </StackPanel>
+           <!--Lock Timer section -->
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="Set a lock timer: " Margin="0,10,0,0" HorizontalAlignment="Center"/>
+                <ComboBox x:Name="LockTimerBox" IsEnabled="{Binding AccessGranted}" IsEditable="False" Width="150">
+                    <ComboBoxItem IsSelected="True">15</ComboBoxItem>
+                    <ComboBoxItem>30</ComboBoxItem>
+                    <ComboBoxItem>60</ComboBoxItem>
+                </ComboBox>
+                <Button x:Name="LockActivationButton" Click="LockActivationButton_Click" Content="Activate Lock"
+                        IsEnabled="{Binding AccessGranted}" Height="20" Width="150" Margin="10"/>
+            </StackPanel>
+        </Grid>
+        <!--Warning section -->
+        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+        <TextBlock Foreground="MediumVioletRed" Text="WARNING" HorizontalAlignment="Center" FontSize="15" FontWeight="Heavy"/>
+        <TextBlock FontSize="15" TextWrapping="Wrap" Text="Letting your child play video games over 60 minutes a day will make him an addict...
+                   and possibly an upcoming terrorist." Margin="10" VerticalAlignment="Center" TextAlignment="Justify"/>
+    </StackPanel>
+</Window>
