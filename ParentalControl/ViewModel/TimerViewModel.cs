@@ -19,7 +19,10 @@ namespace ParentalControl
 
         private void DispatcherTimer_Tick(object sender, EventArgs e)
         {
-            TimeLeft--;
+            if (TimeLeft != 0)
+            {
+                TimeLeft--;
+            }
         }
 
 

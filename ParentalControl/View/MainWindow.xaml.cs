@@ -40,7 +40,7 @@ namespace ParentalControl
         private void LockActivationButton_Click(object sender, RoutedEventArgs e)
         {
 
-            MainViewModel.UpdateTimer(LockTimerBox.SelectedValue);
+            MainViewModel.UpdateTimer();
             TimerWindow timerWindow = new TimerWindow();
             this.Close();
             timerWindow.ShowDialog();

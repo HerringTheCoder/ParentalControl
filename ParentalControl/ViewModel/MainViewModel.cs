@@ -9,7 +9,7 @@ namespace ParentalControl
         public string Login { set; get; } //Template cache fields used for data binding
         public string Password { set; get; }
         public bool AccessGranted { set; get; }
-        public static int TimeLeft { set; get; }
+        public static string TimeLeft { set; get; } = "15";
         public List<User> UserList { set; get; }
 
         public MainViewModel() //default constructor for the viewmodel
@@ -36,10 +36,9 @@ namespace ParentalControl
             return false;
         }
 
-        public static void UpdateTimer(Object x)
+        public static void UpdateTimer()
         {
-            TimeLeft = Convert.ToInt32(x.ToString());
-            App.StaticTimer.TimeLeft = TimeLeft;
+            App.StaticTimer.TimeLeft = Convert.ToInt32(TimeLeft);
         }
     }
 }
