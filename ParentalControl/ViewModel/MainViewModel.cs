@@ -8,32 +8,34 @@ namespace ParentalControl
     {
         public string Login { set; get; } //Template cache fields used for data binding
         public string Password { set; get; }
-        public bool ElevatedPrivileges { set; get;}
+        public bool ElevatedPrivileges { set; get; }
         public bool AccessGranted { set; get; }
-        public List<User> UsersList { set; get; }
+        public List<User> UserList { set; get; }
 
-        public MainViewModel() //default constructor for the viewmodel, initiates the standard list of users
+        public MainViewModel() //default constructor for the viewmodel
         {
-            UsersList = new List<User>()
+            UserList = new List<User>()            //initiates some default data
             {
                 {new Administrator("admin","admin") },
                 {new User("user", "123")},
             };
         }
 
-        
-        public bool CheckLoginStatus()
+
+        public bool CheckCredentials() //checks if user login and password match the data
         {
 
-            foreach (User user in UsersList)
+            foreach (User user in UserList)
             {
                 if (Login == user.Login && Password == user.Password)
                 {
-                    return AccessGranted = user.ElevatedPrivileges;
+                    AccessGranted = (user is Administrator) ? true : false;
+                    return true;
                 }
             }
-            return AccessGranted;
-            
+            return false;
         }
+
+        
     }
 }

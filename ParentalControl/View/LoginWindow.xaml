@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParentalControl"
         mc:Ignorable="d"
-        Title="ParentalControl" Height="160" Width="440" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="ParentalControl" Height="160" Width="320" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <StackPanel>
         <!-- Login Panel-->
         <StackPanel x:Name="LoginPanel">
@@ -21,11 +21,11 @@
             <PasswordBox x:Name="passwordBox" PasswordChanged="OnPasswordChanged" Height="20" Width="280" Margin ="20,0,0,0" HorizontalAlignment="Left"/>
             <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="LoginButton" Click="LoginButton_Click" Content="Login" Grid.Column="0" Width="160" Height="40" HorizontalAlignment="Left" Margin="20,20,0,0"/>
-            <Button x:Name="BackButton" Click="BackButton_Click" Content="Back" Grid.Column="1" Width="160" Height="40" HorizontalAlignment="Left" Margin="30,20,0,0"/>
+            <Button x:Name="LoginButton" Click="LoginButton_Click" Content="Login" IsEnabled="False" Grid.Column="0" Width="120" Height="30" HorizontalAlignment="Left" Margin="20,20,0,0"/>
+            <Button x:Name="BackButton" Click="BackButton_Click" Content="Back" Grid.Column="1" Width="120" Height="30" HorizontalAlignment="Left" Margin="30,20,0,0"/>
         </Grid>
         </StackPanel>
         <!-- End of Login Panel-->
