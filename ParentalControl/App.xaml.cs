@@ -13,6 +13,7 @@ namespace ParentalControl
     /// </summary>
     public partial class App : Application
     {
-        internal static MainViewModel StaticViewModel = new MainViewModel();
+        public static MainViewModel StaticViewModel = new MainViewModel();
+        public static Timer StaticTimer = new Timer();
     }
 }

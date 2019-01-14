@@ -29,8 +29,7 @@ namespace ParentalControl
 
 
         private void ShowLoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            LoginWindow MyLoginWindow = new LoginWindow();
+        {   LoginWindow MyLoginWindow = new LoginWindow();
             this.Visibility = Visibility.Collapsed;
             MyLoginWindow.ShowDialog();
             this.Visibility = Visibility.Visible;
@@ -41,6 +40,12 @@ namespace ParentalControl
         private void LockActivationButton_Click(object sender, RoutedEventArgs e)
         {
 
+            MainViewModel.UpdateTimer(LockTimerBox.SelectedValue);
+            TimerWindow timerWindow = new TimerWindow();
+            this.Close();
+            timerWindow.ShowDialog();
         }
+
+        
     }
 }

@@ -33,6 +33,8 @@
                     <ComboBoxItem IsSelected="True">15</ComboBoxItem>
                     <ComboBoxItem>30</ComboBoxItem>
                     <ComboBoxItem>60</ComboBoxItem>
+                    <ComboBoxItem>90</ComboBoxItem>
+                    <ComboBoxItem>120</ComboBoxItem>
                 </ComboBox>
                 <Button x:Name="LockActivationButton" Click="LockActivationButton_Click" Content="Activate Lock"
                         IsEnabled="{Binding AccessGranted}" Height="20" Width="150" Margin="10"/>

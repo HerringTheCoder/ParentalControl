@@ -41,8 +41,7 @@ namespace ParentalControl
         private void OnPasswordChanged(object sender, RoutedEventArgs e)
         {   
             App.StaticViewModel.Password = passwordBox.Password;
-            LoginButton.IsEnabled = (String.IsNullOrWhiteSpace(passwordBox.Password)) ? false : true;
-            
+            LoginButton.IsEnabled = (String.IsNullOrWhiteSpace(passwordBox.Password)) ? false : true;    
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

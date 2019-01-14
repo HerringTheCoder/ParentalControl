@@ -21,7 +21,9 @@ namespace ParentalControl
     {
         public TimerWindow()
         {
+            TimerViewModel timerViewModel = new TimerViewModel();
             InitializeComponent();
+            DataContext = timerViewModel;
         }
     }
 }
