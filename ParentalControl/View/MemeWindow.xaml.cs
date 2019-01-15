@@ -22,6 +22,18 @@ namespace ParentalControl
         public MemeWindow()
         {
             InitializeComponent();
+            this.PreviewKeyDown += (ss, ee) =>
+            {
+                int F6Counter = 0;
+                if (ee.Key == Key.F6 && F6Counter == 0)
+                {
+                    ImageSource imageSource = new BitmapImage(new Uri("pack://application:,,,/resources/Hackerman.jpg"));
+                    memePath.Source = imageSource;
+                    this.WindowStyle = WindowStyle.SingleBorderWindow;
+                }
+                
+                
+            };
         }
     }
 }

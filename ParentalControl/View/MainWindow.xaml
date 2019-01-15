@@ -29,10 +29,12 @@
            <!--Lock Timer section -->
             <StackPanel Grid.Column="2">
                 <TextBlock Text="Set a lock timer: " Margin="0,10,0,0" HorizontalAlignment="Center"/>
-                <ComboBox x:Name="LockTimerBox" IsEnabled="{Binding AccessGranted}" IsEditable="False" Width="150">
+                <ComboBox x:Name="LockTimerBox" IsEnabled="{Binding AccessGranted}" Text="{Binding TimeLeft}" IsEditable="False" Width="150">
                     <ComboBoxItem IsSelected="True">15</ComboBoxItem>
                     <ComboBoxItem>30</ComboBoxItem>
                     <ComboBoxItem>60</ComboBoxItem>
+                    <ComboBoxItem>90</ComboBoxItem>
+                    <ComboBoxItem>120</ComboBoxItem>
                 </ComboBox>
                 <Button x:Name="LockActivationButton" Click="LockActivationButton_Click" Content="Activate Lock"
                         IsEnabled="{Binding AccessGranted}" Height="20" Width="150" Margin="10"/>

@@ -21,7 +21,19 @@ namespace ParentalControl
     {
         public TimerWindow()
         {
+            TimerViewModel timerViewModel = new TimerViewModel();
             InitializeComponent();
+            DataContext = timerViewModel;
+        }
+
+        private void TimerBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Convert.ToInt32(TimerBox.Text) == 0)
+            {
+                LockWindow lockWindow = new LockWindow();
+                this.Close();
+                lockWindow.Show();
+            }
         }
     }
 }

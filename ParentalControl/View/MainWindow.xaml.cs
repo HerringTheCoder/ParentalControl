@@ -23,24 +23,26 @@ namespace ParentalControl
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = App.StaticViewModel;
-            
+            this.DataContext = App.StaticViewModel;           
         }
 
 
         private void ShowLoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            LoginWindow MyLoginWindow = new LoginWindow();
+        {   LoginWindow MyLoginWindow = new LoginWindow();
             this.Visibility = Visibility.Collapsed;
             MyLoginWindow.ShowDialog();
             this.Visibility = Visibility.Visible;
-
         }
         
 
         private void LockActivationButton_Click(object sender, RoutedEventArgs e)
         {
-
+            MainViewModel.UpdateTimer();
+            TimerWindow timerWindow = new TimerWindow();
+            this.Close();
+            timerWindow.ShowDialog();
         }
+
+        
     }
 }

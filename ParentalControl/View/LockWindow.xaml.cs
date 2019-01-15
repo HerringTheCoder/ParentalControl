@@ -31,12 +31,32 @@ namespace ParentalControl
 
         private void SecretButton_Click(object sender, RoutedEventArgs e)
         {
+            MemeWindow memeWindow = new MemeWindow();
+            this.Visibility = Visibility.Collapsed;
+            this.Close();
+            memeWindow.Show();
 
         }
 
         private void NoSecretButton_Click(object sender, RoutedEventArgs e)
         {
+            lockTextBlock.Text = "Well, sucks to be you :(";
+            LoginWindow loginWindow = new LoginWindow();
+            this.Visibility = Visibility.Collapsed;
+            loginWindow.ShowDialog();
+            if (App.StaticViewModel.CheckCredentials() == true)
+            {
+                MessageBox.Show("Do. Or do not. There is no try. (Parent not detected)");
+                this.Close();
+                Application.Current.Shutdown();
+            }
+            else
+            {
+                this.Visibility = Visibility.Visible;
+            }
 
+            
+           
         }
     }
 }
