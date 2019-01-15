@@ -30,7 +30,8 @@
             <StackPanel Grid.Column="2">
                 <TextBlock Text="Set a lock timer: " Margin="0,10,0,0" HorizontalAlignment="Center"/>
                 <ComboBox x:Name="LockTimerBox" IsEnabled="{Binding AccessGranted}" Text="{Binding TimeLeft}" IsEditable="False" Width="150">
-                    <ComboBoxItem IsSelected="True">15</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">5</ComboBoxItem>
+                    <ComboBoxItem>15</ComboBoxItem>
                     <ComboBoxItem>30</ComboBoxItem>
                     <ComboBoxItem>60</ComboBoxItem>
                     <ComboBoxItem>90</ComboBoxItem>

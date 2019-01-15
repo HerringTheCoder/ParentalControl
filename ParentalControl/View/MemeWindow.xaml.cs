@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Threading;
 using System.Windows.Shapes;
 
 namespace ParentalControl
@@ -24,12 +25,12 @@ namespace ParentalControl
             InitializeComponent();
             this.PreviewKeyDown += (ss, ee) =>
             {
-                int F6Counter = 0;
-                if (ee.Key == Key.F6 && F6Counter == 0)
+                
+                if (ee.Key == Key.F6)
                 {
                     ImageSource imageSource = new BitmapImage(new Uri("pack://application:,,,/resources/Hackerman.jpg"));
                     memePath.Source = imageSource;
-                    this.WindowStyle = WindowStyle.SingleBorderWindow;
+                    
                 }
                 
                 

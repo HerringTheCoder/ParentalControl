@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParentalControl"
         mc:Ignorable="d"
-        Title="LockWindow" Height="600" Width="600" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="LockWindow" Height="600" Width="600" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <StackPanel>
         <TextBlock x:Name ="lockTextBlock" Text="You have been blocked, because this app assumes life is not fun at all. However, there is a way out of this situation. Should I share this secret with you?" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
         <Separator/>

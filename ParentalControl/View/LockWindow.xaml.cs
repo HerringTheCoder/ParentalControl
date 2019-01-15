@@ -45,13 +45,13 @@ namespace ParentalControl
             this.Visibility = Visibility.Collapsed;
             loginWindow.ShowDialog();
             if (App.StaticViewModel.CheckCredentials() == true)
-            {
-                MessageBox.Show("Do. Or do not. There is no try. (Parent not detected)");
+            {               
                 this.Close();
                 Application.Current.Shutdown();
             }
             else
             {
+                MessageBox.Show("Do. Or do not. There is no try. (Parent not detected)");
                 this.Visibility = Visibility.Visible;
             }
 
