@@ -8,13 +8,12 @@ namespace ParentalControl
     class TimerViewModel : BaseViewModel
     {
         public int TimeLeft { get; set; } = App.StaticTimer.TimeLeft;
-
+       public DispatcherTimer DispatchTimer { get; set; }= new DispatcherTimer();
         public TimerViewModel()
-            {   
-                DispatcherTimer dispatcherTimer = new DispatcherTimer();
-                dispatcherTimer.Tick += DispatcherTimer_Tick;
-                dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-                dispatcherTimer.Start();
+            {
+              DispatchTimer.Tick += DispatcherTimer_Tick;          
+              DispatchTimer.Interval = new TimeSpan(0, 0, 1);
+              DispatchTimer.Start();
              }
 
         private void DispatcherTimer_Tick(object sender, EventArgs e)
@@ -23,6 +22,10 @@ namespace ParentalControl
             {
                 TimeLeft--;
             }
+        //    else
+        //    {
+        //        DispatchTimer.Stop();
+        //    }
         }
 
 

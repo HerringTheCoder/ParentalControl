@@ -8,6 +8,6 @@
         Title="TimerWindow" Height="200" Width="480">
     <StackPanel>
         <TextBlock Text="Time left:" TextAlignment="Center" FontSize="50"/>
-        <TextBlock Text="{Binding TimeLeft}" x:Name="TimerBlock" TextAlignment="Center" FontSize="50"/>
+        <TextBox Text="{Binding TimeLeft}" x:Name="TimerBox" TextChanged="TimerBox_TextChanged" TextAlignment="Center" FontSize="50"/>
     </StackPanel>
 </Window>

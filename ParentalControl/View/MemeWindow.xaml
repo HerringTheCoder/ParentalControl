@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParentalControl"
         mc:Ignorable="d"
-        Title="MemeWindow" Height="450" Width="800">
+        Title="MemeWindow" Height="500" Width="800" WindowStyle="None">
     <Grid>
-        
+        <Image x:Name="memePath" Stretch="Fill" Source="/resources/EscapeTheMatrix.jpg"/>
     </Grid>
 </Window>

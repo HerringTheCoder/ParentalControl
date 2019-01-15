@@ -5,18 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParentalControl"
         mc:Ignorable="d"
-        Title="LockWindow" Height="200" Width="600" WindowStyle="None">
+        Title="LockWindow" Height="600" Width="600" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <StackPanel>
-        <TextBlock Text="You have been blocked, because this app assumes life is not fun at all. However, there is a way out of this situation. Should I share this secret with you?" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name ="lockTextBlock" Text="You have been blocked, because this app assumes life is not fun at all. However, there is a way out of this situation. Should I share this secret with you?" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
         <Separator/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
+
             <Button x:Name="SecretButton" Click="SecretButton_Click" Content="I want to know the truth" Grid.Column="0"  Width="150" Height="40" Margin="20"/>
-        <Button x:Name="NoSecretButton" Click="NoSecretButton_Click" Content="I want to live in ignorance" Grid.Column="1" Width=" 150" Height="40" Margin="20"/>
+            <StackPanel Grid.Column="1">
+            <Button x:Name="NoSecretButton" Click="NoSecretButton_Click" Content="I want to live in ignorance" Grid.Column="1" Width=" 150" Height="40" Margin="20"/>
+                <TextBlock TextAlignment="Center" Text="(Ask your parents to unlock it for you)"/>
+            </StackPanel>
         </Grid>
+        <Image Source="/resources/ToughChoice.jpg"/>
     </StackPanel>
 </Window>

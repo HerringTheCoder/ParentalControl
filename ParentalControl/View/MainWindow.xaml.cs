@@ -23,8 +23,7 @@ namespace ParentalControl
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = App.StaticViewModel;
-            
+            this.DataContext = App.StaticViewModel;           
         }
 
 
@@ -33,13 +32,11 @@ namespace ParentalControl
             this.Visibility = Visibility.Collapsed;
             MyLoginWindow.ShowDialog();
             this.Visibility = Visibility.Visible;
-
         }
         
 
         private void LockActivationButton_Click(object sender, RoutedEventArgs e)
         {
-
             MainViewModel.UpdateTimer();
             TimerWindow timerWindow = new TimerWindow();
             this.Close();

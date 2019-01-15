@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Threading;
 using System.Windows.Shapes;
 
 namespace ParentalControl
@@ -22,6 +23,19 @@ namespace ParentalControl
         public MemeWindow()
         {
             InitializeComponent();
+            this.PreviewKeyDown += (ss, ee) =>
+            {
+                
+                if (ee.Key == Key.F6)
+                {
+                    ImageSource imageSource = new BitmapImage(new Uri("pack://application:,,,/resources/Hackerman.jpg"));
+                    memePath.Source = imageSource;
+                    this.Close();
+                    
+                }
+                
+                
+            };
         }
     }
 }
