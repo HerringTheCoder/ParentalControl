@@ -22,9 +22,10 @@ namespace ParentalControl
         public LockWindow()
         {
             InitializeComponent();
+            this.Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Input, new Action(() => Focus()));
             this.Closing += new System.ComponentModel.CancelEventHandler(LockWindow_Closing);
         }
-        void LockWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void LockWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
         }

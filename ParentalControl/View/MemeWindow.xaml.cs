@@ -32,7 +32,10 @@ namespace ParentalControl
                     memePath.Source = imageSource;
                     
                 }
-                
+                if(ee.Key==Key.Escape)
+                {
+                    Application.Current.Shutdown();
+                }
                 
             };
         }

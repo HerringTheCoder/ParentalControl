@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\abzib\Desktop\ParentalControl-DevTest\ParentalControl\obj\Debug\
+C:\Users\Szymon_2\Source\Repos\HerringTheCoder\ParentalControl\ParentalControl\obj\Debug\
 ParentalControl
 none
 false
 DEBUG;TRACE
-C:\Users\abzib\Desktop\ParentalControl-DevTest\ParentalControl\App.xaml
+C:\Users\Szymon_2\Source\Repos\HerringTheCoder\ParentalControl\ParentalControl\App.xaml
 51829046859
 
-19-55495132
-141283213082
+19-246076815
+14547136063
 View\LockWindow.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\MemeWindow.xaml;View\TimerWindow.xaml;
 
-False
+True
 
